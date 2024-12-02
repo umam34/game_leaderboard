@@ -1,0 +1,19 @@
+<!-- app/views/scores/leaderboard.html.erb -->
+<h1>Leaderboard</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.player_name %></td>
+        <td><%= score.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

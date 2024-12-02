@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres # Username PostgreSQL Anda
+  password: your_password # Password PostgreSQL Anda
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: leaderboard_development
+
+test:
+  <<: *default
+  database: leaderboard_test
+
+production:
+  <<: *default
+  database: leaderboard_production
